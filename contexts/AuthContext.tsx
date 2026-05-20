@@ -13,7 +13,7 @@ type AuthContextType = {
         email: string,
         password: string,
         profile?: { name: string, username: string }
-    ) => Promise<{ error: Error | null }>;
+    ) => Promise<{ error: Error | null; confirmEmail?: boolean }>;
     signOut: () => Promise<void>;
 }
 
